@@ -49,7 +49,7 @@ public class SampleController {
     @GetMapping("/long/{id}")
     public long getPathVariable(){
         //you will need to change the method's parameters and return the extracted path variable.
-        return 0;
+        return "Path Variable: "+id;
     }
     /**
      * TODO: extract the request body and respond with it.
@@ -74,8 +74,8 @@ public class SampleController {
      * }
      */
     @PostMapping(value = "/requestbody")
-    public Sample postSample(){
+    public Sample postSample(@RequestBody Sample s){
         //you will need to change the method's parameters and return the extracted request body.
-        return null;
+        return s;
     }
 }
