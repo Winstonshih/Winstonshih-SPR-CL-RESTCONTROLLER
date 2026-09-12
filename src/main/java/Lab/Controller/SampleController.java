@@ -47,9 +47,9 @@ public class SampleController {
      * should respond with "1".
      */
     @GetMapping("/long/{id}")
-    public long getPathVariable(){
+    public long getPathVariable(@PathVariable long id){
         //you will need to change the method's parameters and return the extracted path variable.
-        return "Path Variable: "+id;
+        return id;
     }
     /**
      * TODO: extract the request body and respond with it.
